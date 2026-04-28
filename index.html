@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce System | Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <main class="deck" id="deck">
+      <section class="slide hero is-active" data-theme="hero">
+        <div class="slide-inner hero-grid">
+          <div class="kicker reveal">School Project Presentation</div>
+          <h1 class="hero-title reveal">E-Commerce System</h1>
+          <p class="hero-subtitle reveal">A Modular Web Application</p>
+          <div class="hero-actions reveal">
+            <a href="#demo" class="primary-action">Watch Demo</a>
+            <a href="#features" class="ghost-action">Explore Features</a>
+          </div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="slide" id="problem">
+        <div class="slide-inner centered narrow">
+          <p class="eyebrow reveal">The Problem</p>
+          <h2 class="word-line" data-words="Online stores need fast browsing, simple carts, personal discovery, and secure access."></h2>
+        </div>
+      </section>
+
+      <section class="slide" id="solution">
+        <div class="slide-inner split">
+          <div>
+            <p class="eyebrow reveal">The Solution</p>
+            <h2 class="reveal">One clean Flask application that connects every shopping step.</h2>
+          </div>
+          <div class="solution-panel reveal">
+            <p>
+              Products load instantly, the <strong>cart</strong> stays active in
+              the user session, and <strong>recommendations</strong> turn basic
+              browsing into guided discovery.
+            </p>
+            <div class="signal-row">
+              <span>Routes</span>
+              <span>Sessions</span>
+              <span>Logic</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="features">
+        <div class="slide-inner">
+          <p class="eyebrow reveal">Core Features</p>
+          <h2 class="section-title reveal">Built like a real commerce workflow.</h2>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="feature-icon">01</span>
+              <h3>Product Listing</h3>
+              <p>Browse products with clean cards, prices, and clear actions.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon">02</span>
+              <h3>Cart System</h3>
+              <p>Session-based cart state keeps selected products ready.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon">03</span>
+              <h3>Recommendation Engine</h3>
+              <p>Suggests relevant products from the current shopping context.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-icon">04</span>
+              <h3>Login System</h3>
+              <p>Basic account access for a more complete app structure.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="demo">
+        <div class="slide-inner demo-layout">
+          <div>
+            <p class="eyebrow reveal">Live Demo Feel</p>
+            <h2 class="section-title reveal">A simulated storefront, running inside the presentation.</h2>
+            <p class="muted reveal">Click Add to Cart and watch the session-style cart update.</p>
+          </div>
+
+          <div class="mock-browser reveal" aria-label="E-commerce interface demo">
+            <div class="browser-top">
+              <span></span><span></span><span></span>
+              <div class="url">/products</div>
+              <button class="cart-pill" id="viewCartButton">View Cart <b id="cartCount">0</b></button>
+            </div>
+            <div class="shop-ui">
+              <aside class="shop-side">
+                <strong>Store</strong>
+                <small>Flask routes</small>
+                <small>Session cart</small>
+                <small>Smart suggestions</small>
+              </aside>
+              <div class="product-zone">
+                <article class="product-card active-product">
+                  <div class="product-art"></div>
+                  <h3>Wireless Mouse</h3>
+                  <p>Rs. 799</p>
+                  <button class="add-cart" data-name="Wireless Mouse">Add to Cart</button>
+                </article>
+                <article class="product-card">
+                  <div class="product-art keyboard"></div>
+                  <h3>Mechanical Keyboard</h3>
+                  <p>Rs. 2,499</p>
+                  <button class="add-cart" data-name="Mechanical Keyboard">Add to Cart</button>
+                </article>
+              </div>
+              <div class="cart-preview" id="cartPreview">
+                <strong>Cart Session</strong>
+                <p id="cartStatus">No items yet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="stack">
+        <div class="slide-inner centered">
+          <p class="eyebrow reveal">Tech Stack</p>
+          <h2 class="section-title reveal">Simple tools. Strong structure.</h2>
+          <div class="badge-cloud">
+            <span class="tech-badge reveal">Flask</span>
+            <span class="tech-badge reveal">HTML</span>
+            <span class="tech-badge reveal">CSS</span>
+            <span class="tech-badge reveal">Sessions</span>
+            <span class="tech-badge reveal">GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="flow">
+        <div class="slide-inner">
+          <p class="eyebrow reveal">How It Works</p>
+          <h2 class="section-title reveal">Every request moves through a clean pipeline.</h2>
+          <div class="flow-track" aria-label="User to output flow diagram">
+            <div class="flow-node reveal">User</div>
+            <div class="flow-arrow reveal"></div>
+            <div class="flow-node reveal">Route</div>
+            <div class="flow-arrow reveal"></div>
+            <div class="flow-node reveal">Logic</div>
+            <div class="flow-arrow reveal"></div>
+            <div class="flow-node reveal">Session</div>
+            <div class="flow-arrow reveal"></div>
+            <div class="flow-node reveal">Output</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="recommendations">
+        <div class="slide-inner rec-layout">
+          <div>
+            <p class="eyebrow reveal">Recommendation System</p>
+            <h2 class="section-title reveal">Because the cart knows the context.</h2>
+          </div>
+          <div class="rec-stage reveal">
+            <div class="rec-source">
+              <span>Added</span>
+              <strong>Wireless Mouse</strong>
+            </div>
+            <div class="rec-arrow">suggests</div>
+            <div class="rec-results">
+              <article><span></span>Mouse Pad</article>
+              <article><span></span>Keyboard</article>
+              <article><span></span>USB Hub</article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="deployment">
+        <div class="slide-inner centered">
+          <p class="eyebrow reveal">Deployment</p>
+          <h2 class="section-title reveal">Code moves from GitHub to Render.</h2>
+          <div class="deploy-rail reveal">
+            <div class="deploy-card">GitHub</div>
+            <div class="deploy-line"></div>
+            <div class="deploy-card">Render</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="future">
+        <div class="slide-inner future-layout">
+          <p class="eyebrow reveal">Future Scope</p>
+          <h2 class="section-title reveal">Where the project can go next.</h2>
+          <ul class="future-list">
+            <li class="reveal">Payment gateway integration</li>
+            <li class="reveal">Admin dashboard for product management</li>
+            <li class="reveal">Search, filters, and product categories</li>
+            <li class="reveal">Order history and user profiles</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="slide final-slide" id="final">
+        <div class="slide-inner centered">
+          <p class="eyebrow reveal">End</p>
+          <h2 class="thank-you reveal">Thank You</h2>
+          <button class="question-button reveal" id="soundButton">Ask Questions</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
