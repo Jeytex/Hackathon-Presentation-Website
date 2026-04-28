@@ -7,6 +7,18 @@ const ctx = canvas.getContext("2d");
 let particles = [];
 let cartItems = [];
 
+document.querySelectorAll(".slide").forEach((slide) => {
+  const motionField = document.createElement("div");
+  motionField.className = "motion-field";
+  motionField.setAttribute("aria-hidden", "true");
+
+  for (let index = 0; index < 4; index += 1) {
+    motionField.appendChild(document.createElement("span"));
+  }
+
+  slide.appendChild(motionField);
+});
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -64,12 +76,18 @@ document.querySelectorAll(".add-cart").forEach((button) => {
   });
 });
 
-document.getElementById("viewCartButton").addEventListener("click", () => {
-  document.getElementById("cartPreview").classList.add("flash");
-  window.setTimeout(() => document.getElementById("cartPreview").classList.remove("flash"), 560);
-});
+const viewCartButton = document.getElementById("viewCartButton");
+if (viewCartButton) {
+  viewCartButton.addEventListener("click", () => {
+    document.getElementById("cartPreview").classList.add("flash");
+    window.setTimeout(() => document.getElementById("cartPreview").classList.remove("flash"), 560);
+  });
+}
 
-document.getElementById("soundButton").addEventListener("click", pulseSound);
+const soundButton = document.getElementById("soundButton");
+if (soundButton) {
+  soundButton.addEventListener("click", pulseSound);
+}
 
 function updateCart(productName) {
   const cartCount = document.getElementById("cartCount");
